@@ -1,0 +1,85 @@
+{
+  "name": "gh-pages-lister",
+  "version": "0.1.0",
+  "description": "lists all the repositories that have gh-pages for a github user",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava -w -v",
+    "test:once": "ava -v",
+    "start": "babel-node tools/devServer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gillchristian/gh-pages-lister.git"
+  },
+  "keywords": [
+    "gh-pages",
+    "list-gh-pages",
+    "github",
+    "projects",
+    "react"
+  ],
+  "author": "gillchristian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gillchristian/gh-pages-lister/issues"
+  },
+  "homepage": "https://github.com/gillchristian/gh-pages-lister#readme",
+  "devDependencies": {
+    "ava": "^0.15.2",
+    "babel-cli": "^6.9.0",
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-react-display-name": "^2.0.0",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-1": "^6.5.0",
+    "babel-register": "^6.9.0",
+    "browser-sync": "^2.12.12",
+    "connect-history-api-fallback": "^1.2.0",
+    "css-loader": "^0.23.1",
+    "deep-freeze-strict": "^1.1.1",
+    "eslint": "^2.11.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-import-resolver-node": "^0.2.0",
+    "eslint-plugin-import": "^1.8.1",
+    "eslint-plugin-jsx-a11y": "^1.3.0",
+    "eslint-plugin-react": "^5.1.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
+    "jsdom": "^9.2.1",
+    "react-addons-test-utils": "^15.1.0",
+    "sinon": "^1.17.4",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-hot-middleware": "^2.10.0"
+  },
+  "dependencies": {
+    "bulma": "0.0.28",
+    "classnames": "^2.2.5",
+    "es6-promise": "^3.2.1",
+    "font-awesome": "^4.6.3",
+    "lodash": "^4.13.1",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-redux": "^4.4.5",
+    "redux": "^3.5.2",
+    "redux-promise": "^0.5.3",
+    "redux-thunk": "^2.1.0",
+    "whatwg-fetch": "^1.0.0"
+  },
+  "ava": {
+    "babel": "inherit",
+    "require": [
+      "./utils/setup-test-env.js"
+    ],
+    "files": [
+      "src/**/*.spec.js"
+    ]
+  }
+}
