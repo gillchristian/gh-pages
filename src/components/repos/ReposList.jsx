@@ -19,11 +19,9 @@ class ReposList extends React.Component {
       return <span>Loading...</span>
     }
     return (
-      <table className="table">
-        <tbody>
-          {this.reposMap()}
-        </tbody>
-      </table>
+      <div className="pages">
+        {this.reposMap()}
+      </div>
     )
   }
 }

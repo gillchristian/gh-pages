@@ -2,24 +2,22 @@ import React, {PropTypes} from 'react'
 
 import clasnames from 'classnames'
 
+import Language from './Language'
+import Desc from './Desc'
+
 const Repo = ({repo}) => {
-  const repoIconClass = clasnames('fa',{
+  const repoIconClass = clasnames('fa', 'repo-or-fork',{
     'fa-code-fork': repo.fork,
     'fa-book': !repo.fork
   })
   return (
-    <tr>
-      <td className="is-icon">
-        <i className={repoIconClass}></i>
-      </td>
-      <td><a href={repo.url}>{repo.name}</a></td>
-      <td>{repo.desc}</td>
-      <td>
-        <i className="fa fa-star"></i> {repo.stars}
-      </td>
-      <td>{repo.updatedAt}</td>
-      <td>{repo.language}</td>
-    </tr>
+    <div className="repoRow">
+      <i className={repoIconClass}></i>
+      <span className="starts">{repo.stars} <i className="fa fa-star"></i></span>
+      <span><a href={repo.homepage} target="_blank">{repo.name}</a></span>
+      <Desc text={repo.desc}/>
+      <Language lang={repo.language} />
+    </div>
   )
 }
 
