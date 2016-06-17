@@ -5,10 +5,13 @@
  * Base typography & raw elements
  *
  * ---------------------
+ * |--- Header
  * |--- Footer
  * ---------------------
  */
 
+ /* --- Header ---*/
+ @import '_header';
 /* --- Footer ---*/
 @import '_footer';
 

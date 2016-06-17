@@ -1,0 +1,14 @@
+header {
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  .header {
+    display: flex;
+    align-items: center;
+  }
+  .title {
+    margin-left: 10px;
+  }
+}
