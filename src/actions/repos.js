@@ -1,5 +1,7 @@
 import 'whatwg-fetch'
 
+import {readOrReject} from '../utils/fetch-utils'
+
 // --- action types ---
 export const REQUEST_REPOS = 'REQUEST_REPOS'
 export const REQUEST_REPOS_SUCCESS = 'REQUEST_REPOS_SUCCESS'
@@ -55,6 +57,7 @@ export function fetchRepos(username) {
     dispatch(requestRepos())
     return fetch(`https://api.github.com/users/${username}/repos`)
       .then(response => response.json())
+      .then(readOrReject)
       .then(json => dispatch(requestReposSuccess(json)))
       .catch(err => dispatch(requestReposError(err)))
   }
