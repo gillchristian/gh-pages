@@ -29,10 +29,10 @@ const config = {
         loader: 'babel'
       },
       {
-        test: /\.css$/,
-        loaders: ['style', 'css']
+        test: /\.s?css$/,
+        loaders: ['style', 'css', 'sass']
       },
-       {
+      {
         test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
         loader: "url?limit=10000&mimetype=application/font-woff"
       },
