@@ -12,7 +12,7 @@ const App = ({error, loading}) => (
     <main>
       <Header />
       <div className="fixed-header-fix" />
-      <div className="container">
+      <div className="container centered">
         <SearchBar />
         {
           error ?
