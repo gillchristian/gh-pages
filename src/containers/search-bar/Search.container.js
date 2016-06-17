@@ -2,7 +2,7 @@ import {connect} from 'react-redux'
 
 import {updateSearchField} from '../../actions/search'
 
-import {fetchUser} from '../../actions/user'
+import {fetchRepos} from '../../actions/repos'
 
 import Search from '../../components/search-bar/Search'
 
@@ -14,7 +14,7 @@ const mapStateToProps = state => (
 
 const mapDispatchToProps = {
   update: updateSearchField,
-  search: fetchUser
+  search: fetchRepos
 }
 
 const SearchContainer = connect(

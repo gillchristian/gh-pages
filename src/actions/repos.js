@@ -56,7 +56,6 @@ export function fetchRepos(username) {
   return function (dispatch) {
     dispatch(requestRepos())
     return fetch(`https://api.github.com/users/${username}/repos`)
-      .then(response => response.json())
       .then(readOrReject)
       .then(json => dispatch(requestReposSuccess(json)))
       .catch(err => dispatch(requestReposError(err)))

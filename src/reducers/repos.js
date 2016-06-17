@@ -8,7 +8,7 @@ import {
 
 export const INITIAL_STATE = {
   loading: false,
-  erro: false,
+  error: false,
   list: []
 }
 
