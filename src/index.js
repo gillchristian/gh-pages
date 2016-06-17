@@ -6,8 +6,9 @@ import configureStore from './store/configureStore'
 
 import AppContainer from './containers/App.container'
 
-import 'bulma/css/bulma.min.css'
+import 'normalize.css/normalize.css'
 import 'font-awesome/css/font-awesome.min.css'
+import './styles/main.scss'
 
 const store = configureStore();
 

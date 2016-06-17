@@ -1,0 +1,26 @@
+/**
+ * Base styles
+ *
+ * Element styles, no classes nor IDs.
+ * Base typography & raw elements
+ *
+ * ---------------------
+ * |---
+ * ---------------------
+ */
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+  color: #454545;
+  background-color: #EEF;
+}
+
+a {
+  color: #22BAD9;
+
+  &:hover {
+    color: white;
+    background-color: #22BAD9;
+  }
+}

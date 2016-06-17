@@ -1,0 +1,24 @@
+.repoRow {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  padding: 5px;
+
+  & > * {
+    margin-right: 5px;
+  }
+
+  .repo-or-fork,
+  .starts {
+    margin-right: 10px;
+  }
+
+  .starts {
+    display: flex;
+  }
+
+  .lang {
+    padding: 2px;
+    border-radius: 2px;
+  }
+}
