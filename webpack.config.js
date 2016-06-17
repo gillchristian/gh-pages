@@ -18,7 +18,7 @@ const config = {
   entry,
   output: {
     path: `${__dirname}/dist`,
-    publicPath: 'http://localhost:3000/',
+    publicPath: isProd ? 'dist/' : 'http://localhost:3000/',
     filename: isProd ? '[name].prod.js' : '[name].dev.js'
   },
   module: {

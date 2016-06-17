@@ -24,7 +24,7 @@ browserSync({
         publicPath: config.output.publicPath,
 
         // pretty colored output
-        stats: { colors: true },
+        stats: {colors: true},
 
         // Set to false to display a list of each file that is being bundled.
         noInfo: true
