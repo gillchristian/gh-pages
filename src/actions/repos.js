@@ -55,7 +55,8 @@ export function requestReposError(error) {
 export function fetchRepos(username) {
   return function (dispatch) {
     dispatch(requestRepos())
-    return fetch(`https://api.github.com/users/${username}/repos`)
+    const url = `https://api.github.com/users/${username}/repos?sort=updated`
+    return fetch(url)
       .then(readOrReject)
       .then(json => dispatch(requestReposSuccess(json)))
       .catch(err => dispatch(requestReposError(err)))
