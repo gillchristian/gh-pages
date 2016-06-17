@@ -14,7 +14,7 @@ const store = configureStore();
 
 render(
   <Provider store={store}>
-    <AppContainer username={'gillchristian'}/>
+    <AppContainer/>
   </Provider>,
   document.getElementById('app')
 )
