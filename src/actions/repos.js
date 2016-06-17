@@ -49,7 +49,8 @@ export const requestReposError = error => ({
  */
 export const fetchRepos = username => dispatch => {
   dispatch(requestRepos())
-  const url = `https://api.github.com/users/${username}/repos?sort=updated&type=all`
+  const base = `https://api.github.com/users/${username}`
+  const url = `${base}/repos?sort=updated&type=all&per_page=100`
   return fetch(url)
     .then(readOrReject)
     .then(json => filterReposWithPages(json, username))
