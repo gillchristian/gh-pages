@@ -6,14 +6,14 @@ import Language from './Language'
 import Desc from './Desc'
 
 const Repo = ({repo}) => {
-  const repoIconClass = clasnames('fa', 'repo-or-fork',{
+  const repoIconClass = clasnames('fa', 'repo-or-fork', 'icon',{
     'fa-code-fork': repo.fork,
     'fa-book': !repo.fork
   })
   return (
     <div className="repoRow">
       <i className={repoIconClass}></i>
-      <span className="starts">{repo.stars} <i className="fa fa-star"></i></span>
+      <span className="starts">{repo.stars} <i className="icon fa fa-star"></i></span>
       <span><a href={repo.homepage} target="_blank">{repo.name}</a></span>
       <Desc text={repo.desc}/>
       <Language lang={repo.language} />

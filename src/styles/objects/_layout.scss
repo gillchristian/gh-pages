@@ -4,3 +4,21 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+// --- generates the sticky footer layout, ----
+// --- but is important to keep the App.jsx ---
+// --- markup with this order: ----------------
+// --- <div classNeme="Site"> 
+// ---   <header>
+// ---   <main>
+// ---   <footer>
+// --- </div>
+// --- ----------------------------------------
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}

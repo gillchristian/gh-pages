@@ -1,5 +1,7 @@
 import React, {PropTypes} from 'react'
 
+import Loading from '../common/Loading'
+import Error from '../common/Error'
 import Repo from './Repo'
 
 class ReposList extends React.Component {
@@ -13,10 +15,13 @@ class ReposList extends React.Component {
   }
 
   render(){
-    const {loading} = this.props
+    const {loading, error} = this.props
 
     if (loading) {
-      return <span>Loading...</span>
+      return <Loading />
+    }
+    if (error) {
+      return <Error message={error}/>
     }
     return (
       <div className="pages">
