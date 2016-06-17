@@ -5,7 +5,6 @@
  * @returns {Object}
  */
 export function readOrReject(response) {
-  console.log(response);
   return response.ok ?
     response.json() : Promise.reject(response.text());
 }

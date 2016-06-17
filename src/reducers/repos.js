@@ -1,5 +1,3 @@
-import {filterRepos} from '../utils/repos-list-filter'
-
 import {
   REQUEST_REPOS,
   REQUEST_REPOS_SUCCESS,
@@ -26,7 +24,7 @@ export default function (state = INITIAL_STATE, action) {
       return {
         ...state,
         loading: false,
-        list: filterRepos(action.payload)
+        list: action.payload
       }
     case REQUEST_REPOS_ERROR:
       return {
