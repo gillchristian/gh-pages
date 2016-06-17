@@ -1,6 +1,5 @@
 import React from 'react'
 
-import Profile from './profile/Profile'
 import ReposList from '../containers/repos/ReposList.container'
 
 import 'whatwg-fetch'
@@ -11,25 +10,15 @@ class App extends React.Component {
   }
 
   render(){
-    const {
-      profile,
-      loading
-    } = this.props
+    const {loading} = this.props
 
     if (loading) {
-      return <span>Loading...</span>
+      return <div className="loading">loading...</div>
     }
 
     return (
       <div className="container">
-        <div className="columns">
-          <div className="column is-4">
-            <Profile user={profile} />
-          </div>
-          <div className="column">
-            <ReposList username={'gillchristian'} />
-          </div>
-        </div>
+        <ReposList username={'gillchristian'} />
       </div>
     )
   }
