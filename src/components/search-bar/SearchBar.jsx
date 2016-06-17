@@ -1,11 +1,11 @@
 import React from 'react'
 
-import SearchInput from '../../containers/search-bar/SearchInput.container'
+import Search from '../../containers/search-bar/Search.container'
 
 const SearchBar = () => (
   <div className="SearchBar">
     <span className="SearchBar-label">Type the Github user you want to find:</span>
-    <SearchInput />
+    <Search />
   </div>
 )
 

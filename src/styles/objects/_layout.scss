@@ -3,12 +3,14 @@
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 // --- generates the sticky footer layout, ----
 // --- but is important to keep the App.jsx ---
 // --- markup with this order: ----------------
-// --- <div classNeme="Site"> 
+// --- <div classNeme="Site">
 // ---   <header>
 // ---   <main>
 // ---   <footer>

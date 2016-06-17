@@ -1,4 +1,6 @@
 @mixin fullFixedAndCentered() {
+  width: 90%;
+  max-width: 450px;
   position: fixed;
   left: 50%;
   top: 50%;

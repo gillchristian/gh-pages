@@ -11,6 +11,7 @@ const App = ({error, loading}) => (
   <div className="Site">
     <main>
       <Header />
+      <div className="fixed-header-fix" />
       <div className="container">
         <SearchBar />
         {

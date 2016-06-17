@@ -4,7 +4,7 @@ import {updateSearchField} from '../../actions/search'
 
 import {fetchUser} from '../../actions/user'
 
-import SearchInput from '../../components/search-bar/SearchInput'
+import Search from '../../components/search-bar/Search'
 
 const mapStateToProps = state => (
   {
@@ -17,9 +17,9 @@ const mapDispatchToProps = {
   search: fetchUser
 }
 
-const SearchInputContainer = connect(
+const SearchContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(SearchInput)
+)(Search)
 
-export default SearchInputContainer
+export default SearchContainer

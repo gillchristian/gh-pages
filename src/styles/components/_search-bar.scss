@@ -2,15 +2,31 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  .SearchInput {
-    width: 100%;
-    max-width: 250px;
+
+  .Form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .Search,
+  .Submit {
     border: 1px solid black;
     margin: 5px;
     padding: 5px;
     height: 1.5em;
     background-color: $bg-soft;
   }
+
+  .Search {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .Submit {
+    width: 150px;
+    height: 33px;
+  }
+
   &-label {
     margin-right: 10px;
   }
