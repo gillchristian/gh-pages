@@ -2,15 +2,18 @@ header {
   position: fixed;
   border-bottom: 1px solid black;
   margin-bottom: 20px;
-  height: 100px;
+  height: 80px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  padding: 15px;
+
   .header {
     display: flex;
     align-items: center;
   }
+
   .title {
     margin-left: 10px;
   }

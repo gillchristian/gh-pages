@@ -1,11 +1,14 @@
 .SearchBar {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
 
   .Form {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .Search,
@@ -28,6 +31,6 @@
   }
 
   &-label {
-    margin-right: 10px;
+    margin: 10px;
   }
 }
