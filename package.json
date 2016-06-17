@@ -6,7 +6,8 @@
   "scripts": {
     "test": "ava -w -v",
     "test:once": "ava -v",
-    "start": "babel-node tools/devServer.js"
+    "start": "babel-node tools/devServer.js",
+    "build": "NODE_ENV=prod webpack --progress --colors"
   },
   "repository": {
     "type": "git",

@@ -1,7 +1,7 @@
 'use strict'
 
-import webpack from 'webpack'
-import entry from  './webpack/entry.map'
+let webpack = require('webpack')
+let entry =  require('./webpack/entry.map')
 
 const isProd = process.env.NODE_ENV === 'prod'
 
@@ -34,23 +34,23 @@ const config = {
       },
       {
         test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
-        loader: "url?limit=10000&mimetype=application/font-woff"
+        loader: "url?limit=10000&name=[name].[ext]&mimetype=application/font-woff"
       },
       {
         test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
-        loader: "url?limit=10000&mimetype=application/font-woff"
+        loader: "url?limit=10000&name=[name].[ext]&mimetype=application/font-woff"
       },
       {
         test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-        loader: "url?limit=10000&mimetype=application/octet-stream"
+        loader: "url?limit=10000&name=[name].[ext]&mimetype=application/octet-stream"
       },
       {
         test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-        loader: "file"
+        loader: "file?name=[name].[ext]"
       },
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-        loader: "url?limit=10000&mimetype=image/svg+xml"
+        loader: "url?limit=10000&name=[name].[ext]&mimetype=image/svg+xml"
       }
     ]
   },
@@ -88,7 +88,11 @@ function prodPlugins() {
   return [
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.UglifyJsPlugin()
+    new webpack.optimize.UglifyJsPlugin({
+      compress:{
+        warnings: true
+      }
+    })
   ]
 }
 
@@ -105,5 +109,4 @@ function basicPlugins(globals) {
   ]
 }
 
-export default config
 module.exports = config
