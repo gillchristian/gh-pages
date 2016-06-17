@@ -4,6 +4,7 @@ import clasnames from 'classnames'
 
 import Language from './Language'
 import Desc from './Desc'
+import OwnerTag from './OwnerTag'
 
 const Repo = ({repo}) => {
   const repoIconClass = clasnames('fa', 'repo-or-fork', 'icon',{
@@ -15,6 +16,7 @@ const Repo = ({repo}) => {
       <i className={repoIconClass}></i>
       <span className="starts">{repo.stars} <i className="icon fa fa-star"></i></span>
       <span><a href={repo.homepage} target="_blank">{repo.name}</a></span>
+      {repo.isOwn ? null : <OwnerTag owner={repo.owner}/>}
       <Desc text={repo.desc}/>
       <Language lang={repo.language} />
     </div>

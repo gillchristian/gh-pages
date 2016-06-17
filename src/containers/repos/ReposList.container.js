@@ -1,7 +1,5 @@
 import {connect} from 'react-redux'
 
-import {fetchRepos} from '../../actions/repos'
-
 import ReposList from '../../components/repos/ReposList'
 
 const mapStateToProps = state => (
@@ -13,13 +11,8 @@ const mapStateToProps = state => (
   }
 )
 
-const mapDispatchToProps = {
-  getRepos: fetchRepos
-}
-
 const ReposListContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps
+  mapStateToProps
 )(ReposList)
 
 export default ReposListContainer
