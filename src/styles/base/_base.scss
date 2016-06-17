@@ -15,15 +15,15 @@
 body {
   font-family: 'Roboto Mono', monospace;
   font-size: 14px;
-  color: #454545;
-  background-color: #EEF;
+  color: $font-primary;
+  background-color: $bg-soft;
 }
 
 a {
-  color: #22BAD9;
+  color: $links;
 
   &:hover {
     color: white;
-    background-color: #22BAD9;
+    background-color: $links;
   }
 }

@@ -1,0 +1,17 @@
+.SearchBar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  .SearchInput {
+    width: 100%;
+    max-width: 250px;
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+    height: 1.5em;
+    background-color: $bg-soft;
+  }
+  &-label {
+    margin-right: 10px;
+  }
+}

@@ -11,11 +11,10 @@ const mapStateToProps = state => (
   }
 )
 
-const mapDispatchToProps = dispatch =>{
-  const getUser = username => dispatch(fetchUser(username))
-
-  return {getUser}
+const mapDispatchToProps = {
+  getUser: fetchUser
 }
+
 const AppContainer = connect(
   mapStateToProps,
   mapDispatchToProps

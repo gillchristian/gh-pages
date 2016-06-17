@@ -8,16 +8,13 @@ const mapStateToProps = state => (
   {
     list: state.repos.list,
     loading: state.repos.loading,
-    error: state.repos.error
+    error: state.repos.error,
+    username: state.search.user
   }
 )
 
-const mapDispatchToProps = dispatch => {
-  const getRepos = username => dispatch(fetchRepos(username))
-
-  return {
-    getRepos
-  }
+const mapDispatchToProps = {
+  getRepos: fetchRepos
 }
 
 const ReposListContainer = connect(
