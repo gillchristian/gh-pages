@@ -30,7 +30,10 @@ export default function (state = INITIAL_STATE, action) {
       return {
         ...state,
         loading: false,
-        error: 'Ups! There was an error, please try again!'
+        error: `
+          Ups! There was an error, please try again!
+          Maybe the user does not exist, or you reached the Github API request limit
+        `
       }
     default:
       return state
