@@ -2,6 +2,7 @@ import React, {PropTypes} from 'react'
 
 import Loading from '../common/Loading'
 import Error from '../common/Error'
+import Alert from '../common/Alert'
 import Repo from './Repo'
 
 const ReposList = ({list, loading, error}) => {
@@ -12,6 +13,11 @@ const ReposList = ({list, loading, error}) => {
   }
   if (error) {
     return <Error message={error}/>
+  }
+
+  if (list.length < 1) {
+    const message = "this user does not have gh-pages ¯\\_(ツ)_/¯"
+    return <Alert message={message} />
   }
   return (
     <div className="pages">
