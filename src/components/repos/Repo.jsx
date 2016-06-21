@@ -18,7 +18,7 @@ const Repo = ({repo}) => {
       <span><a href={repo.homepage} target="_blank">{repo.name}</a></span>
       {repo.isOwn ? null : <OwnerTag owner={repo.owner}/>}
       <Desc text={repo.desc}/>
-      <Language lang={repo.language} />
+      {!repo.language ? null : <Language lang={repo.language} />}
     </div>
   )
 }
