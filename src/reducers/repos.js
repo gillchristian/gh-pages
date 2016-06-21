@@ -24,6 +24,7 @@ export default function (state = INITIAL_STATE, action) {
       return {
         ...state,
         loading: false,
+        error: false,
         list: action.payload
       }
     case REQUEST_REPOS_ERROR:
