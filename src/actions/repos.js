@@ -51,6 +51,7 @@ export const fetchRepos = username => dispatch => {
   dispatch(requestRepos())
   const base = `https://api.github.com/users/${username}`
   const url = `${base}/repos?sort=updated&type=all&per_page=100`
+  // TODO: add pagination
   return fetch(url)
     .then(readOrReject)
     .then(json => filterReposWithPages(json, username))
