@@ -24,5 +24,4 @@ const App = ({error, loading}) => (
   </div>
 )
 
-
 export default App

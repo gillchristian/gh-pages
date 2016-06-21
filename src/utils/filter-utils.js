@@ -17,7 +17,7 @@ export const filterReposWithPages = (list, username) => {
         fork: repo.fork,
         languagesUrl: repo.languages_url,
         updatedAt: repo.updated_at,
-        homepage: repo.homepage || buildRepoPage(repo.owner.login, repo.name),
+        homepage: repo.homepage || repoPage(repo.owner.login, repo.name),
         stars: repo.stargazers_count,
         language: repo.language,
         isOwn: repo.owner.login === username,
@@ -29,7 +29,6 @@ export const filterReposWithPages = (list, username) => {
     ))
 }
 
-
 /**
  * Returns the gh-pages from username and reponame
  *
@@ -37,6 +36,6 @@ export const filterReposWithPages = (list, username) => {
  * @param {String}  repo name
  * @returns {String}  repo page
  */
-function buildRepoPage(user, repo) {
+function repoPage(user, repo) {
   return `http://${user}.github.io/${repo}`
 }
