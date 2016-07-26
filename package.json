@@ -9,7 +9,7 @@
     "dev": "babel-node tools/devServer.js",
     "public-files": "cp app/index.html src/public",
     "start": "npm run dev",
-    "now-start": "babel-node src/server.js",
+    "now-start": "nodemon --exec 'babel-node' src/server.js",
     "build": "npm run public-files && NODE_ENV='prod' webpack -p --progress --colors",
     "now-build": "echo 'skiping the build :D'"
   },
@@ -69,8 +69,10 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "es6-promise": "^3.2.1",
+    "express": "^4.14.0",
     "font-awesome": "^4.6.3",
     "lodash": "^4.13.1",
+    "nodemon": "^1.10.0",
     "normalize.css": "^4.1.1",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
