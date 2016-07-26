@@ -7,7 +7,7 @@
     "test": "ava -w -v",
     "test:once": "ava -v",
     "dev": "babel-node tools/devServer.js",
-    "start": "npm run build && babel-node src/server.js",
+    "start": "babel-node src/server.js",
     "public-files": "cp -r public/ src/ && cp app/index.html src/public",
     "build": "npm run public-files && NODE_ENV='prod' webpack --progress --colors"
   },
