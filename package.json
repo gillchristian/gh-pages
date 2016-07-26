@@ -1,5 +1,5 @@
 {
-  "name": "gh-pages-lister",
+  "name": "gh-pages",
   "version": "0.1.0",
   "description": "lists all the repositories that have gh-pages for a github user",
   "main": "index.js",
