@@ -17,9 +17,9 @@ if (isProd) {
 const config = {
   entry,
   output: {
-    path: `${__dirname}/dist`,
-    publicPath: isProd ? 'dist/' : 'http://localhost:3000/',
-    filename: isProd ? '[name].prod.js' : '[name].dev.js'
+    path: `${__dirname}/src/public`,
+    publicPath: isProd ? 'public/' : 'http://localhost:3000/',
+    filename: '[name].js'
   },
   module: {
     loaders: [
@@ -74,7 +74,6 @@ const config = {
 function defineGlobals(enviroment) {
   return {
     'process.env.NODE_ENV': JSON.stringify(enviroment),
-    __DEV__: enviroment === 'development',
     NODE_ENV: enviroment
   }
 }

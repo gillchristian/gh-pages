@@ -23,7 +23,7 @@ const Repo = ({repo}) => {
   )
 }
 
-Repo.PropTypes = {
+Repo.propTypes = {
   repo: PropTypes.object.isRequired
 }
 

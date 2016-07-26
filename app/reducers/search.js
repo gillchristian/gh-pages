@@ -3,7 +3,7 @@ import {
 } from '../actions/search'
 
 export const INITIAL_STATE = {
-  user: ""
+  value: ''
 }
 
 export default search
@@ -16,7 +16,7 @@ function search(state = INITIAL_STATE, action) {
     case UPDATE_SEARCH_FIELD:
       return {
         ...state,
-        user: action.payload
+        value: action.payload
       }
     default:
       return state

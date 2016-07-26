@@ -4,17 +4,16 @@ import {Provider} from 'react-redux'
 
 import configureStore from './store/configureStore'
 
-import AppContainer from './containers/App.container'
+import Routes from './components/Routes'
 
 import 'normalize.css/normalize.css'
-import 'font-awesome/css/font-awesome.min.css'
 import './styles/main.scss'
 
-const store = configureStore();
+const store = configureStore()
 
 render(
   <Provider store={store}>
-    <AppContainer/>
+    <Routes/>
   </Provider>,
   document.getElementById('app')
 )

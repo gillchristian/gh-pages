@@ -6,8 +6,10 @@
   "scripts": {
     "test": "ava -w -v",
     "test:once": "ava -v",
-    "start": "babel-node tools/devServer.js",
-    "build": "NODE_ENV=prod webpack --progress --colors"
+    "dev": "babel-node tools/devServer.js",
+    "start": "npm run build && babel-node src/server.js",
+    "public-files": "cp -r public/ src/ && cp app/index.html src/public",
+    "build": "npm run public-files && NODE_ENV='prod' webpack --progress --colors"
   },
   "repository": {
     "type": "git",
@@ -63,7 +65,6 @@
     "webpack-hot-middleware": "^2.10.0"
   },
   "dependencies": {
-    "bulma": "0.0.28",
     "classnames": "^2.2.5",
     "es6-promise": "^3.2.1",
     "font-awesome": "^4.6.3",
@@ -72,6 +73,7 @@
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-redux": "^4.4.5",
+    "react-router": "^3.0.0-alpha.1",
     "redux": "^3.5.2",
     "redux-promise": "^0.5.3",
     "redux-thunk": "^2.1.0",

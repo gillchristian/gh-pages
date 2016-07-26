@@ -25,7 +25,8 @@ const ReposList = ({list, loading, error}) => {
     </div>
   )
 }
-ReposList.PropTypes = {
+
+ReposList.propTypes = {
   error: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.bool

@@ -11,3 +11,9 @@
 
 /* --- Languages colors --- */
 @import '_languages-colors';
+
+.no-style-link {
+  &:hover {
+    background: none;
+  }
+}
