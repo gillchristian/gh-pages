@@ -1,3 +1,4 @@
 module.exports = {
-  bundle: './app'
+  bundle: './app',
+  styles: './app/styles'
 }
