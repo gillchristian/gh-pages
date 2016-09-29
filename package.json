@@ -2,7 +2,7 @@
   "name": "gh-pages",
   "version": "0.1.0",
   "description": "lists all the repositories that have gh-pages for a github user",
-  "main": "index.js",
+  "main": "src/serve.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gillchristian/gh-pages-lister.git"
