@@ -1,0 +1,36 @@
+/**
+ * Base styles
+ *
+ * Element styles, no classes nor IDs.
+ * Base typography & raw elements
+ *
+ * ---------------------
+ * |--- Header
+ * |--- Footer
+ * ---------------------
+ */
+
+ /* --- Header ---*/
+ @import '_header';
+/* --- Footer ---*/
+@import '_footer';
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+  color: $font-primary;
+  background-color: $bg-soft;
+}
+
+a {
+  color: $links;
+
+  &:hover {
+    color: white;
+    background-color: $links;
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}

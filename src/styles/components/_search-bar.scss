@@ -1,0 +1,36 @@
+.SearchBar {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  .Form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .Search,
+  .Submit {
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+    height: 33px;
+    background-color: $bg-soft;
+  }
+
+  .Search {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .Submit {
+    width: 150px;
+  }
+
+  &-label {
+    margin: 10px;
+  }
+}
