@@ -1,0 +1,9 @@
+@import '../tools/_extends';
+
+.Loading {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+}
+.Loading-fixed {
+  @include fullFixedAndCentered();
+}

@@ -1,0 +1,7 @@
+@mixin fullFixedAndCentered() {
+  width: 90%;
+  max-width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

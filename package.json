@@ -1,0 +1,54 @@
+{
+  "name": "gh-pages",
+  "version": "0.1.0",
+  "description": "lists all the repositories that have gh-pages for a github user",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gillchristian/gh-pages-lister.git"
+  },
+  "keywords": [
+    "gh-pages",
+    "list-gh-pages",
+    "github",
+    "projects",
+    "react"
+  ],
+  "author": "gillchristian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gillchristian/gh-pages-lister/issues"
+  },
+  "homepage": "https://github.com/gillchristian/gh-pages-lister#readme",
+  "devDependencies": {
+    "react-scripts": "0.6.1",
+    "deep-freeze-strict": "^1.1.1",
+    "sinon": "^1.17.4",
+    "node-sass": "^3.7.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "es6-promise": "^3.2.1",
+    "express": "^4.14.0",
+    "font-awesome": "^4.6.3",
+    "lodash": "^4.13.1",
+    "nodemon": "^1.10.0",
+    "normalize.css": "^4.1.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-redux": "^4.4.5",
+    "react-router": "^3.0.0-alpha.1",
+    "redux": "^3.5.2",
+    "redux-promise": "^0.5.3",
+    "redux-thunk": "^2.1.0",
+    "whatwg-fetch": "^1.0.0"
+  },
+  "scripts": {
+    "serve": "nodemon src/server.js",
+    "start": "react-scripts start",
+    "build": "npm run styles && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "styles": "node utils/compile-sass"
+  }
+}
